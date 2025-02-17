@@ -13,6 +13,7 @@ namespace Hangfire.Dashboard.BasicAuthorization
             RequireSsl = true;
             LoginCaseSensitive = true;
             Users = new BasicAuthAuthorizationUser[] { };
+            Roles = new List<string>(1);
         }
 
         /// <summary>
@@ -34,5 +35,7 @@ namespace Hangfire.Dashboard.BasicAuthorization
         /// Represents users list to access Hangfire dashboard.
         /// </summary>
         public IEnumerable<BasicAuthAuthorizationUser> Users { get; set; }
+
+        public IEnumerable<string> Roles { get; set; }
     }
 }
